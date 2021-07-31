@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    overflow: hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #18182e;
+
+}
+
+section::before{
+    content:'';
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(#74e6ee, rgb(31, 118, 218));
+    border-radius: 50%;
+}
+section::after{
+    content:'';
+    position: absolute;
+    bottom: 25%;
+    left: 30%;
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(#3784cc, rgb(48, 28, 104));
+    border-radius: 50%;
+    
+}
+
+.card{
+ position: relative;
+ width: 508px;
+ height: 314px;
+ transform-style: preserve-3d;
+ perspective: 500px;
+ z-index: 1;
+}
+.card .face
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255 ,255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transform-style:preserve-3d ;
+    transition: 1s;
+
+}
+
+
+
+.card .face.front .number{
+    position: absolute;
+    bottom: 130px;
+    left: 40px;
+    color: rgb(135, 212, 203);
+    font-weight: 500;
+    
+    letter-spacing: 10px;
+    font-size: 18px;
+    font-family: 'Poppins',sans-serif;
+    text-shadow: 0 2px 1px #0005;
+}
+.card .face.front .cardholder{
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+    color: rgb(135, 212, 203);
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    letter-spacing:1px;
+    font-weight: 500;
+    
+    
+}
+.card .face.front .star{
+    font-size: 50px;
+    color: rgb(135, 212, 203);
+    position: absolute;
+    bottom:0;
+    left: 40px;
+    top:20px;
+    font-weight: bold;
+
+}
+.card .face.front i{
+    font-size: 30px;
+    color: rgb(135, 212, 203);
+    position: absolute;
+    bottom:20px;
+    right:30px;
+    letter-spacing: 10px;
+    transform: rotate(90deg);
+}
